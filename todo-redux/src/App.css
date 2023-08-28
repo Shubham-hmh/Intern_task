@@ -181,7 +181,6 @@ a {
 
 
 
-/* auth card */
 
 
 
@@ -226,7 +225,6 @@ a {
   background-color:var(--color-131921);
   color: white;
 }
-/*auth card ends here */
 
 body {
   font-family: Arial, sans-serif;
@@ -234,7 +232,6 @@ body {
   padding: 0;
 }
 
-/* AddTask.css */
 
 .add-task {
   background-color: #f5f5f5;
