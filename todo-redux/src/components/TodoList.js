@@ -71,8 +71,8 @@ function TodoList() {
         onDragOver={(e) => handleDragOver(e, status)}
         onDrop={(e) => handleDrop(e, status)}
       >
-        <h4 className="todo-title">Title : {todo.title}</h4>
-        <p className="todo-description">Description: {todo.description}</p>
+        <h4 className="todo-title"><b style={{color:"#131921"}}>Title :</b> {todo.title}</h4>
+        <p className="todo-description"><b style={{color:"#131921"}}>Description :</b>{todo.description}</p>
        
 
        <div className="d-flex justify-content-between">

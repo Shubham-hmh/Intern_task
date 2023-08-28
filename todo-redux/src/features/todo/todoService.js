@@ -1,9 +1,9 @@
 import axios from 'axios';
-import { base_url, config, } from '../../utils/axiosConfig';
+import { todo_url, config, } from '../../utils/axiosConfig';
 
 
 const getTodos = async () => {
-    const response = await axios.get(`${base_url}`);
+    const response = await axios.get(`${todo_url}`);
     if (response.data) {
         return response.data;
     }
@@ -12,9 +12,7 @@ const getTodos = async () => {
 
 const editTodos = async (yourData) => {
     const {prodId,todoData} =yourData;
-
-    console.log(prodId,"👍👍👍👍👍",todoData);
-    const response =await axios.put(`${base_url}updateUser/${prodId}`,todoData);
+    const response =await axios.patch(`${todo_url}updateUser/${prodId}`,todoData);
     console.log(response.data);
     if (response.data) {
         return response.data;
@@ -23,7 +21,7 @@ const editTodos = async (yourData) => {
 }
 
 const deleteTodo = async (todoId) => {
-    const response =await axios.delete(`${base_url}deleteUser/${todoId}`);
+    const response =await axios.delete(`${todo_url}deleteUser/${todoId}`);
     if (response.data) {
         return response.data;
     }
@@ -31,7 +29,7 @@ const deleteTodo = async (todoId) => {
 }
 
 const singleTodo = async (todoId) => {
-    const response =await axios.get(`${base_url}find/${todoId}`);
+    const response =await axios.get(`${todo_url}find/${todoId}`);
     if (response.data) {
         return response.data;
     }
@@ -39,7 +37,7 @@ const singleTodo = async (todoId) => {
 }
 
 const addTodos =async (todoData)=>{
-    const response =await axios.post(`${base_url}`,todoData,config);
+    const response =await axios.post(`${todo_url}`,todoData,config);
     if (response.data) {
         return response.data;
     }
