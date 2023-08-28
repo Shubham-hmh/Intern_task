@@ -58,7 +58,6 @@
 }
 
 
-/* Adjustments for smaller screens */
 @media screen and (max-width: 768px) {
   .todo-list {
     flex-direction: column;
